@@ -33,5 +33,7 @@ jobs:
           title: Release apps
           commit: Release apps
           publish: echo "stub release"
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
       - name: print outputs
         run: "echo '${{toJSON(steps.changesets)}}}'"
